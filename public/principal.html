@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <meta charset="UTF-8">
     <title>Alura Typer</title>
 </head>
 <body>
-    <h1>Seja bem vindo ao curso de jQuery :)</h1>
-    <p class="frase">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eos nemo voluptatem adipisci. Voluptas rem facere, voluptate sunt consectetur fugiat repellat, et aperiam iste, alias tenetur! Sunt magni et tempora.</p>
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
+        <p class="frase">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eos nemo voluptatem adipisci. Voluptas rem facere, voluptate sunt consectetur fugiat repellat, et aperiam iste, alias tenetur! Sunt magni et tempora.</p>
 
-    <ul class="informacoes">
-        <li><span class="tamanho">0</span> palavras</li>
-        <li><span class="tempo">0</span> segundos</li>
-    </ul>
+        <ul class="informacoes center">
+            <li>
+                <i class="small material-icons icones palavras-icone"></i>
+                <span class="tamanho">0</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons icones contador timer-on"></i>
+                <span class="tempo">0</span> segundos
+            </li>
+        </ul>
 
-    <textarea class="digitacao"></textarea>
+        <textarea class="digitacao"></textarea>
+        <div class="botoes">
+            <a class="btn-floating btn-large waves-effect waves-light red" id="reset-game">
+                <i class="material-icons reset-game"></i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light blue" id="stop-game">
+                <i class="material-icons stop-game"></i>
+            </a>
+        </div>
 
-    <ul class="info-digitacao">
-        <li><span class="count-char">0</span> caracteres</li>
-        <li><span class="count-words">0</span> palavras</li>
-    </ul>
+        <ul class="info-digitacao center">
+            <li>
+                <i class="small material-icons icones char-type"></i>
+                <span class="count-char">0</span> caracteres
+            </li>
+            <li>
+                <i class="small material-icons icones word-type"></i>
+                <span class="count-words">0</span> palavras
+            </li>
+        </ul>
+    </div>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
 

@@ -1,0 +1,45 @@
+.digitacao:disabled{
+    background-color: #b8b8b8;
+}
+.digitacao{
+    font-size: 1.2em;
+    min-height: 10em;
+}
+.informacoes, .info-digitacao{
+    font-size: 1.2em;
+}
+.frase{
+    font-size: 1.5em;
+}
+.icones{
+    vertical-align: middle;
+}
+.timer-on::before{
+    content: "timer";
+}
+.timer-off::before{
+    content: "timer_off";
+}
+.palavras-icone::before{
+    content: "description";
+}
+.char-type::before{
+    content: "keyboard";
+}
+.word-type::before{
+    content: "assessment";
+}
+.stop-game::before{
+    content: "stop";
+}
+.reset-game::before{
+    content: "restore";
+}
+.digitacao-errada{
+    border: .2em solid rgb(255, 38, 38);
+    background-color: rgb(255, 182, 182);
+}
+.digitacao-correta{
+    border: .2em solid rgb(57, 194, 57);
+    background-color: rgb(220, 255, 220)
+}
