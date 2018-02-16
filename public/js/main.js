@@ -3,8 +3,11 @@ var frase = $(".frase");
 var btnReset = $("#reset-game");
 var btnStop = $("#stop-game");
 var contador = $(".contador");
-function getPhraseSize(){
-    $(".tamanho").text($(".frase").text().split(" ").length);
+var btnShuffle = $(".shuffle-phrase");
+
+
+function getPhraseSize(texto){
+    $(".tamanho").text(texto.split(" ").length);
 }
 function setWordsCounter(){
     $(".count-words").text("0");
@@ -35,7 +38,7 @@ function stopCountdown(countdown){
     });
 }
 function setCountdown(seconds){
-    var tempo = $(".tempo")
+    var tempo = $(".tempo");
     tempo.text(seconds);
     digitacao.one("input", function(){
         var countdown = setInterval(function(){
@@ -47,6 +50,7 @@ function setCountdown(seconds){
             contador.addClass("timer-off");
             btnReset.attr("disabled", false);
             clearInterval(countdown);
+            adicionaPlacar($(".nome").val(), $(".count-words").text(), $(".count-char").text(), 10);
         }
     }, 1000);
     stopCountdown(countdown);
@@ -66,20 +70,19 @@ function setValidators(){
     });
 }
 $(document).ready(function(){
-    getPhraseSize();
+    getPhrase();
     setCharCounter();
     setWordsCounter();
-    setCountdown(5);
     setValidators();
+
     btnReset.attr("disabled", true);
     digitacao.removeClass("digitacao-errada");
     digitacao.removeClass("digitacao-correta");
 });
 btnReset.click(function(){
-    getPhraseSize();
+    getPhrase();
     setCharCounter();
     setWordsCounter();
-    setCountdown(5);
     setValidators();
     digitacao.val("");
     digitacao.attr("disabled", false);
@@ -89,4 +92,7 @@ btnReset.click(function(){
     contador.removeClass("timer-off");
     digitacao.removeClass("digitacao-errada");
     digitacao.removeClass("digitacao-correta");
+});
+btnShuffle.click(function(){
+    getPhrase();
 });

@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1 class="center">Alura Typer</h1>
-        <p class="frase">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur eos nemo voluptatem adipisci. Voluptas rem facere, voluptate sunt consectetur fugiat repellat, et aperiam iste, alias tenetur! Sunt magni et tempora.</p>
+        <p class="frase"></p>
 
         <ul class="informacoes center">
             <li>
@@ -22,7 +22,9 @@
                 <span class="tempo">0</span> segundos
             </li>
         </ul>
-
+        <div class="notice"></div>
+        <label for="nome"> Nome </label>
+        <input id="nome" type="text" class="nome" placeholder="digite seu nome">
         <textarea class="digitacao"></textarea>
         <div class="botoes">
             <a class="btn-floating btn-large waves-effect waves-light red" id="reset-game">
@@ -30,6 +32,12 @@
             </a>
             <a class="btn-floating btn-large waves-effect waves-light blue" id="stop-game">
                 <i class="material-icons stop-game"></i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light green" id="show-placar">
+                <i class="material-icons show-placar"></i>
+            </a>
+            <a class="btn-floating btn-large waves-effect waves-light green" id="shuffle-phrase">
+                <i class="material-icons shuffle-phrase"></i>
             </a>
         </div>
 
@@ -43,9 +51,26 @@
                 <span class="count-words">0</span> palavras
             </li>
         </ul>
+        <section id="placar" class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th> Nome </th>
+                        <th> Nº Palavras </th>
+                        <th> Char/Segundo </th>
+                        <th> Remover </th>
+                    </tr>
+                </thead>
+                <tbody class="corpo-tabela">
+                
+                </tbody>
+            </table>
+        </section>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
 </body>
 </html>
