@@ -19,7 +19,7 @@
             </li>
             <li>
                 <i class="small material-icons icones contador timer-on"></i>
-                <span class="tempo">0</span> segundos
+                <span class="tempo" data-time>0</span> segundos
             </li>
         </ul>
         <div class="notice"></div>
@@ -36,9 +36,13 @@
             <a class="btn-floating btn-large waves-effect waves-light green" id="show-placar">
                 <i class="material-icons show-placar"></i>
             </a>
-            <a class="btn-floating btn-large waves-effect waves-light green" id="shuffle-phrase">
+            <a class="btn-floating btn-large waves-effect waves-light deep-purple" id="shuffle-phrase">
                 <i class="material-icons shuffle-phrase"></i>
             </a>
+            <a class="btn-floating btn-large waves-effect waves-light lime" id="select-phrase">
+                <i class="material-icons select-phrase"></i>
+            </a>
+            <input type="number" value="1" min="1" id="select-phrase-input">
         </div>
 
         <ul class="info-digitacao center">
@@ -57,8 +61,7 @@
                 <thead>
                     <tr>
                         <th> Nome </th>
-                        <th> Nº Palavras </th>
-                        <th> Char/Segundo </th>
+                        <th> Pontos </th>
                         <th> Remover </th>
                     </tr>
                 </thead>

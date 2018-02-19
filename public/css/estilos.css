@@ -41,6 +41,12 @@
 .shuffle-phrase::before{
     content: "shuffle";
 }
+.select-phrase::before{
+    content: "repeat_one";
+}
+#select-phrase-input{
+    width: 60px;
+}
 .digitacao-errada{
     border: .2em solid rgb(255, 38, 38);
     background-color: rgb(255, 182, 182);
@@ -60,7 +66,7 @@
     text-align: center;
 }
 .load{
-    position:absolute;
+    position:fixed;
     top: 50%;
     left: 50%;                                                                                                                                                                                                                                                                                                                                                  
     animation: spin 2s infinite;
